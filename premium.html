@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Üyelik - Osmanlıca Öğren</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <style>
+        .pricing-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .premium-feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .premium-feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .premium-feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .highlight-card {
+            position: relative;
+            border: 2px solid #ffc107;
+        }
+        
+        .highlight-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ffc107;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .trial-badge {
+            background: linear-gradient(45deg, #ffc107, #ff9800);
+            color: white;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="container py-4">
+        <header class="text-center mb-5">
+            <h1 class="display-4 fw-bold"><i class="bi bi-stars text-warning"></i> Premium Üyelik</h1>
+            <p class="lead">Osmanlıca öğrenme deneyiminizi bir üst seviyeye taşıyın</p>
+            
+            <div class="theme-switcher btn-group mt-2">
+                <button class="btn btn-sm btn-light theme-btn active" data-theme="light" title="Açık tema">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <button class="btn btn-sm btn-dark theme-btn" data-theme="dark" title="Koyu tema">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button class="btn btn-sm btn-warning theme-btn" data-theme="ottoman" title="Osmanlı teması">
+                    <i class="bi bi-palette-fill"></i>
+                </button>
+            </div>
+        </header>
+
+        <div id="trialStatusInfo" class="row mb-4"></div>
+
+        <div class="row mb-5">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="alert alert-warning">
+                    <h4><i class="bi bi-lightning-charge-fill"></i> Premium Üyelik Avantajları</h4>
+                    <p class="mb-0">7 gün ücretsiz deneme ile tüm özellikleri keşfedin!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- Ücretsiz Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card h-100">
+                    <div class="card-header bg-light text-center py-4">
+                        <h3 class="fw-bold">Ücretsiz</h3>
+                        <div class="display-4 fw-bold">₺0</div>
+                        <small class="text-muted">/ her zaman ücretsiz</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="premium-feature-list">
+                            <li><span class="feature-icon bg-light text-primary"><i class="bi bi-check"></i></span> Temel kelime listeleri</li>
+                            <li><span class="feature-icon bg-light text-primary"><i class="bi bi-check"></i></span> 100 kelime limiti</li>
+                            <li><span class="feature-icon bg-light text-secondary"><i class="bi bi-x"></i></span> Özel içerikler</li>
+                            <li><span class="feature-icon bg-light text-secondary"><i class="bi bi-x"></i></span> Sınırsız liste</li>
+                            <li><span class="feature-icon bg-light text-secondary"><i class="bi bi-x"></i></span> Gelişmiş istatistikler</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light text-center py-3">
+                        <button class="btn btn-outline-primary w-100" disabled>Mevcut Planınız</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card h-100 highlight-card">
+                    <div class="highlight-badge trial-badge">7 GÜN ÜCRETSİZ</div>
+                    <div class="card-header bg-warning text-center py-4">
+                        <h3 class="fw-bold">Premium</h3>
+                        <div class="display-4 fw-bold">₺29.99</div>
+                        <small class="text-muted">/ aylık</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="premium-feature-list">
+                            <li><span class="feature-icon bg-warning bg-opacity-25 text-warning"><i class="bi bi-check"></i></span> 7 gün ücretsiz deneme</li>
+                            <li><span class="feature-icon bg-warning bg-opacity-25 text-warning"><i class="bi bi-check"></i></span> Sınırsız kelime ekleme</li>
+                            <li><span class="feature-icon bg-warning bg-opacity-25 text-warning"><i class="bi bi-check"></i></span> Özel kelime listeleri</li>
+                            <li><span class="feature-icon bg-warning bg-opacity-25 text-warning"><i class="bi bi-check"></i></span> Gelişmiş istatistikler</li>
+                            <li><span class="feature-icon bg-warning bg-opacity-25 text-warning"><i class="bi bi-check"></i></span> Reklamsız deneyim</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-warning bg-opacity-10 text-center py-3">
+                        <button id="premiumSubscribeBtn" class="btn btn-warning w-100">
+                            <i class="bi bi-stars"></i> Ücretsiz Dene
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Yıllık Plan -->
+            <div class="col-md-4">
+                <div class="card pricing-card h-100">
+                    <div class="card-header bg-success text-white text-center py-4">
+                        <h3 class="fw-bold">Yıllık</h3>
+                        <div class="display-4 fw-bold">₺299.99</div>
+                        <small class="text-white text-opacity-75">/ yıllık (2 ay ücretsiz)</small>
+                    </div>
+                    <div class="card-body">
+                        <ul class="premium-feature-list">
+                            <li><span class="feature-icon bg-success bg-opacity-25 text-success"><i class="bi bi-check"></i></span> Tüm premium özellikler</li>
+                            <li><span class="feature-icon bg-success bg-opacity-25 text-success"><i class="bi bi-check"></i></span> Özel yıllık indirim</li>
+                            <li><span class="feature-icon bg-success bg-opacity-25 text-success"><i class="bi bi-check"></i></span> Öncelikli destek</li>
+                            <li><span class="feature-icon bg-success bg-opacity-25 text-success"><i class="bi bi-check"></i></span> Özel içerik erişimi</li>
+                            <li><span class="feature-icon bg-success bg-opacity-25 text-success"><i class="bi bi-check"></i></span> Yıllık rapor</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-success bg-opacity-10 text-center py-3">
+                        <button id="yearlySubscribeBtn" class="btn btn-success w-100">Yıllık Üye Ol</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Premium Giriş Modalı -->
+        <div class="modal fade" id="premiumLoginModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="bi bi-star-fill text-warning"></i> Premium Deneme</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle"></i> 7 günlük ücretsiz deneme sürümünü başlatmak için şifreyi girin.
+                        </div>
+                        <div class="mb-3">
+                            <label for="premiumPassword" class="form-label">Deneme Şifresi</label>
+                            <input type="password" class="form-control" id="premiumPassword" placeholder="Deneme şifresini girin">
+                            <div class="form-text">Deneme şifresi: 1234567890</div>
+                        </div>
+                        <button id="premiumLoginBtn" class="btn btn-warning w-100">
+                            <i class="bi bi-stars"></i> Denemeyi Başlat
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <small class="text-muted">Deneme süresi sonunda otomatik olarak iptal edilir.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Tema değiştirme
+                document.querySelectorAll('.theme-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        document.body.className = `${btn.dataset.theme}-theme`;
+                        localStorage.setItem('osmanlicaTheme', btn.dataset.theme);
+                    });
+                });
+
+                // Premium butonları
+                document.getElementById('premiumSubscribeBtn')?.addEventListener('click', () => {
+                    const modal = new bootstrap.Modal(document.getElementById('premiumLoginModal'));
+                    modal.show();
+                });
+
+                document.getElementById('yearlySubscribeBtn')?.addEventListener('click', () => {
+                    const modal = new bootstrap.Modal(document.getElementById('premiumLoginModal'));
+                    modal.show();
+                });
+
+                // Premium giriş işlemi
+                document.getElementById('premiumLoginBtn')?.addEventListener('click', () => {
+                    const password = document.getElementById('premiumPassword').value;
+                    if (password === '1234567890') {
+                        const trialEndDate = new Date();
+                        trialEndDate.setDate(trialEndDate.getDate() + 7);
+                        
+                        localStorage.setItem('osmanlicaPremium', 'true');
+                        localStorage.setItem('trialStartDate', new Date().toISOString());
+                        localStorage.setItem('trialEndDate', trialEndDate.toISOString());
+                        
+                        alert(`7 günlük premium deneme süreniz başladı!\nBitiş tarihi: ${trialEndDate.toLocaleDateString()}`);
+                        
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('premiumLoginModal'));
+                        modal.hide();
+                        
+                        // Sayfayı yenile
+                        window.location.reload();
+                    } else {
+                        alert('Geçersiz şifre! Deneme şifresi: 1234567890');
+                    }
+                });
+
+                // Premium durumunu göster
+                function checkPremiumStatus() {
+                    const isPremium = localStorage.getItem('osmanlicaPremium') === 'true';
+                    const trialEndDate = localStorage.getItem('trialEndDate');
+                    const trialInfoElement = document.getElementById('trialStatusInfo');
+                    
+                    if (isPremium && trialEndDate) {
+                        const now = new Date();
+                        const endDate = new Date(trialEndDate);
+                        const remainingDays = Math.ceil((endDate - now) / (1000 * 60 * 60 * 24));
+                        
+                        if (remainingDays > 0) {
+                            trialInfoElement.innerHTML = `
+                                <div class="col-12">
+                                    <div class="alert alert-success">
+                                        <i class="bi bi-stars"></i> 
+                                        <strong>Premium deneme sürümünüz aktif!</strong>
+                                        Kalan süre: ${remainingDays} gün
+                                        <button class="btn btn-sm btn-outline-success float-end" id="premiumDetailsBtn">
+                                            <i class="bi bi-info-circle"></i> Detaylar
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            document.getElementById('premiumDetailsBtn')?.addEventListener('click', () => {
+                                const startDate = new Date(localStorage.getItem('trialStartDate'));
+                                alert(`Deneme sürümü detayları:\n\nBaşlangıç: ${startDate.toLocaleDateString()}\nBitiş: ${endDate.toLocaleDateString()}\nKalan gün: ${remainingDays}`);
+                            });
+                        }
+                    }
+                }
+                
+                checkPremiumStatus();
+            });
+        </script>
+    </div>
+ <a href="index.html" class="btn btn-secondary btn-hat m-2">
+                                <i class="bi bi-house-door"></i> Ana Sayfa
+                            </a>
+</body>
+</html>
